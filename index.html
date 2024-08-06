@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Text Encryptor</title>
+    <link
+      href="/styles/main.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="/assets/logo.svg"
+        alt="logo"
+      />
+    </header>
+    <main class="container">
+      <section class="input-container">
+        <textarea
+          class="input-text"
+          cols="30"
+          rows="10"
+          name="input-text"
+          id="input-text"
+        ></textarea>
+        <div>
+          <h6 class="warning-text">Solo letras minúsculas y sin acentos</h6>
+        </div>
+        <div class="btn-container">
+          <button
+            class="btn-encrypt"
+            onclick="encryptText()"
+            id="encrypt"
+          >
+            Encriptar
+          </button>
+          <button
+            class="btn-decrypt"
+            onclick="decryptText()"
+            id="decrypt"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <section class="output-container">
+        <textarea
+          class="output-text"
+          cols="28"
+          rows="10"
+          name="output-text"
+          id="output-text"
+        ></textarea>
+        <div class="text-information">
+          <h1 class="title-output">Ningún mensaje fue encontrado</h1>
+          <h6 class="subtitle-output">
+            Ingresa el texto que desees encriptar o desencriptar
+          </h6>
+        </div>
+        <div class="btn-container">
+          <button
+            class="btn-decrypt btn-copy"
+            id="btn-copy"
+            onclick="copyToClipboard()"
+          >
+            Copiar
+          </button>
+        </div>
+      </section>
+    </main>
+    <script
+      defer
+      type="text/javascript"
+      src="/js/main.js"
+    ></script>
+  </body>
+</html>

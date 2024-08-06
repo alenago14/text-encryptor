@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --main-bg-color: #f3f5fc;
+  --main-bg-dark-color: #000000;
+  --main-bg-color-2: #ffffff;
+  --main-bg-color-3: #0a3871;
+  --main-font-dark-color: #ffffff;
+  --main-font-color: #0a3871;
+  --main-font-color-2: #000000;
+  --main-font-color-3: #65747d;
+  --main-font-size: 16px;
+  --main-font-family: "Inter", sans-serif;
+
+  /* Variables para el modo oscuro */
+  --dark-bg-color: #f0edcf;
+  --dark-bg-color-2: #121212;
+  --dark-bg-color-3: #40a2d8;
+  --dark-font-color: #333333;
+  --dark-font-color-2: #ffffff;
+  --dark-btn-bg-color: #e0e0e0;
+  --dark-btn-bg-color-2: #e5ddc5;
+  --dark-btn-font-color: #ffffff;
+  --dark-btn-font-color-2: #000000;
+}
+/* Reset CSS */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+/* Body */
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.logo {
+  padding-top: 14px;
+  margin-left: 24px;
+  width: 3%;
+}
+.container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.input-container,
+.output-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+.output-container {
+  width: 30%;
+  background-color: var(--main-bg-color-2);
+  border-radius: 24px;
+}
+
+.input-text {
+  margin-top: 20px;
+
+  width: 100%;
+  color: var(--main-font-color);
+  padding: 30px;
+  resize: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: var(--main-bg-color);
+}
+.input-text::placeholder {
+  color: var(--dark-btn-fo);
+  text-transform: lowercase;
+  font-weight: bold;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+}
+.input-text:focus {
+  outline: none;
+}
+.warning-text {
+  gap: 10px;
+  color: var(--main-font-color-3);
+  font-size: 0.5rem;
+  text-align: left;
+}
+.output-text {
+  background-image: url("/assets/muneco.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  resize: none;
+  outline: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 20px 0 20px;
+  text-decoration: none;
+  color: var(--main-font-color);
+}
+.text-information {
+  padding: 0 20px 0 20px;
+}
+.title-output {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.subtitle-output {
+  text-align: center;
+  font-size: 0.6rem;
+}
+.output-text:focus {
+  outline: none;
+}
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.btn-decrypt {
+  background: #d8dfe8;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  color: #0a3871;
+  cursor: pointer;
+  height: 67px;
+  margin-left: 30px;
+  width: 328px;
+}
+.btn-encrypt {
+  background: #0a3871;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  color: white;
+  cursor: pointer;
+  height: 67px;
+  margin-left: 30px;
+  width: 328px;
+}
+.btn-copy {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .logo {
+    width: 6%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-container {
+    width: 100%;
+  }
+  .output-container {
+    width: 100%;
+  }
+  .btn-decrypt {
+    width: 80%;
+  }
+  .btn-encrypt {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 8%;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-decrypt {
+    margin-bottom: 20px;
+    width: 80%;
+  }
+  .btn-encrypt {
+    margin-bottom: 10px;
+
+    width: 80%;
+  }
+}
